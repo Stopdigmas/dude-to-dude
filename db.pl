@@ -163,13 +163,24 @@ barba(edson).
 barba(felipe).
 barba(romeu).
 
+% bigode
+bigode(felipe).
+bigode(romeu).
+bigode(renato).
+bigode(fábio).
+bigode(cacau).
+bigode(arya).
+bigode(naveen).
+bigode(meg).
+bigode(koda).
+bigode(nina).
+
 % oculos
 oculos(felipe).
 oculos(bruna).
 oculos(renato).
 oculos(fabio).
 oculos(edson).
-
 
 
 
