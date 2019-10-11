@@ -15,6 +15,23 @@
 % koda
 % nina
 
+numero(1, clarissa).
+numero(2, felipe).
+numero(3, mariana).
+numero(4, romeu).
+numero(5, maurício).
+numero(6, milene).
+numero(7, carla).
+numero(8, renato).
+numero(9, fábio).
+numero(10, edson).
+numero(11, cacau).
+numero(12, arya).
+numero(13, naveen).
+numero(14, meg).
+numero(15, koda).
+numero(16, nina).
+
 % olho(nome, cor)
 olho(clarissa, azul).
 olho(bruna, castanho).
