@@ -25,7 +25,8 @@ ler_caracteristica(2):-
     write('3 - Verde'),
     write('4 - Amarelo'),
     read(Option),
-    ler_atributo(Option)
+    ler_atributo(Option).
+
 ler_caracteristica(3):-
     write('Qual é a característica do cabelo?'),
     write('1 - Castanho'),
@@ -38,7 +39,8 @@ ler_caracteristica(3):-
     write('8 - Longo'),
     write('9 - Curto'),
     read(Option),
-    ler_atributo(Option)
+    ler_atributo(Option).
+
 ler_caracteristica(4).
 ler_caracteristica(5):-
     write('Qual a espécie?'),
@@ -46,17 +48,19 @@ ler_caracteristica(5):-
     write('2 - Cachorro'),
     write('3 - Gato'),
     read(Option),
-    ler_atributo(Option)
+    ler_atributo(Option).
+
 ler_caracteristica(6):-
     write('Qual o gênero?'),
     write('1 - Masculino'),
     write('2 - Feminino'),
     read(Option),
-    ler_atributo(Option)
+    ler_atributo(Option).
+
 ler_caracteristica(7).
 
 vez_do_usuario() :-
-    write('')
+    write('').
 
 main:-
     sorteio(S),
