@@ -161,10 +161,10 @@ pergunta_genero(2,S):-
     genero(S,feminino).
 
 main:-
-    sorteio(S),
-    assertz(personagem(usuario, S)),
-    write('Tua cara é: '), write(S), nl,
     sorteio(S1),
-    assertz(personagem(computador,S1)), 
-    write('A cara do computador e: '), write(S1),
+    sorteio(S),
+    assertz(personagem(usuario, S1)),
+    write('Tua cara é: '), write(S1), nl,
+    assertz(personagem(computador,S)), 
+    write('A cara do computador e: '), write(S),
     mostra_menu(X, S).
