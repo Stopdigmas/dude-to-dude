@@ -19,11 +19,11 @@ numero(1, clarissa).
 numero(2, felipe).
 numero(3, mariana).
 numero(4, romeu).
-numero(5, maurício).
+numero(5, mauricio).
 numero(6, milene).
 numero(7, carla).
 numero(8, renato).
-numero(9, fábio).
+numero(9, fabio).
 numero(10, edson).
 numero(11, cacau).
 numero(12, arya).
@@ -167,7 +167,7 @@ barba(romeu).
 bigode(felipe).
 bigode(romeu).
 bigode(renato).
-bigode(fábio).
+bigode(fabio).
 bigode(cacau).
 bigode(arya).
 bigode(naveen).
