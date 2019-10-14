@@ -4,7 +4,7 @@ if_else(_,_,Z):-Z.
 lista_computador(X):- computador(X).
 lista_perguntas(X):- perguntas(X).
 
-sorteio_pergunta(S):-
+sorteio_pergunta():-
     lista_perguntas(Y),
     random_member(X, Y),
     deletar_perguntas(X, Y),
@@ -22,7 +22,7 @@ percorre_lista(Computador, OptionsToDelete, Novalista) :-
 deletar_elemento(0, Computador, _, _):-
     retract(computador(X)),
     assertz(computador(Computador)),
-    vez_jogador(S).
+    vez_jogador.
 
 deletar_elemento(N,Computador,OptionsToDelete, Novalista):-
     [HEAD | TAIL] = OptionsToDelete,
@@ -31,8 +31,10 @@ deletar_elemento(N,Computador,OptionsToDelete, Novalista):-
 
 adivinhar(Computador) :-
     nth0(0, Computador, Resposta),
-    write('Você é o(a) '),
-    write(Resposta), nl.
+    cls,
+    write('Já sei!!! Você é o(a) '),
+    write(Resposta),
+    write('! Acertei?'), nl, !.
 
 pergunta_computador(1):-
     nl,
@@ -255,3 +257,5 @@ pergunta_computador(20):-
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
+
+cls :- write('\33\[2J').

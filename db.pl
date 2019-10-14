@@ -63,7 +63,7 @@ cabelo(carla, loiro, curto).
 cabelo(renato, loiro, curto).
 cabelo(fábio, grisalho, curto).
 cabelo(edson, preto, curto).
-cabelo(cacau, beige, curto).
+cabelo(cacau, branco, curto).
 cabelo(arya, mesclado, longo).
 cabelo(naveen, amarelo,curto).
 cabelo(meg, marrom, curto).
@@ -190,3 +190,4 @@ oculos(nina, nao).
 
 computador([clarissa,felipe,mariana,romeu,maurício,milene,carla,renato,fábio,edson,cacau,arya,naveen,meg,koda,nina]).
 perguntas([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]).
+carta(inicio).
