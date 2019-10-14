@@ -70,96 +70,114 @@ ler_caracteristica(6,S):-
     pergunta_genero(Option,S).
 
 ler_caracteristica(7,S):-
-    write('Usa oculos?'),
+    write('Usa óculos?'),
     oculos(S, sim).
 
 ler_caracteristica(8,S):-
-    write('E aluno?'),
+    write('É aluno?'),
     funcao(S, aluno).
 
 ler_caracteristica(9,S):-
-    write('E professor'),
+    write('É professor?'),
     funcao(S, professor).
 
 % PERGUNTA SORE OLHO
 pergunta_cor_olho(1,S):-
     nl,
     write('A cor do olho e Castanho?'),
-    olho(S,castanho).
+    if_else(olho(S,olho), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_cor_olho(2,S):-
     nl,
     write('A cor do olho e Azul?'),
-    olho(S,azul).
+    if_else(olho(S,azul), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_cor_olho(3,S):-
     nl,
     write('A cor do olho e Verde?'),
-    olho(S,verde).
+    if_else(olho(S,verde), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_cor_olho(4,S):-
     nl,
     write('A cor do olho e Amarelo?'),
-    olho(S,amarelo).
+    if_else(olho(S,amarelo), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 % PERGUNTA SOBRE O CABELO
 pergunta_caracteristica_cabelo(1, S):-
     write('Possui cabelo Castanho?'),
-    cabelo(S,castanho).
+    if_else(cabelo(S,castanho), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(2, S):-
     write('Possui cabelo Preto?'),
-    cabelo(S,preto).
+    if_else(cabelo(S,preto), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(3, S):-
     write('Possui cabelo Loiro?'),
-    cabelo(S,loiro).
+    if_else(cabelo(S,loiro), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(4, S):-
     write('Possui cabelo Grisalho?'),
-    cabelo(S,grisalho).
+    if_else(cabelo(S,grisalho), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(5, S):-
     write('Possui cabelo Mesclado?'),
-    cabelo(S,mesclado).
+    if_else(cabelo(S,mesclado), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(6, S):-
     write('Possui cabelo Amarelo?'),
-    cabelo(S,amarelo).
+    if_else(cabelo(S,amarelo), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(7, S):-
     write('Possui cabelo Marrom?'),
-    cabelo(S,marrom).
+    if_else(cabelo(S,marrom), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(8, S):-
     write('Possui cabelo Longo?'),
-    cabelo(S,longo).
+    if_else(cabelo(S,longo), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_caracteristica_cabelo(9, S):-
     write('Possui cabelo Curto?'),
-    cabelo(S,curto).
+    if_else(cabelo(S,curto), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 % PERGUNTA ESPECIE
 pergunta_especie(1,S):-
     write('A especie e Humano?'),
-    especie(S,humano).
+    if_else(especie(S,humano), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_especie(2,S):-
     write('A especie e Cachorro?'),
-    especie(S,cachorro).
+    if_else(especie(S,cachorro), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_especie(3,S):-
     write('A especie e Gato?'),
-    especie(S,gato).
+    if_else(especie(S,gato), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 % Pergunta GENERO
 pergunta_genero(1,S):-
     write('O genero e masculino?'),
-    genero(S,masculino).
+    if_else(genero(S,masculino), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 pergunta_genero(2,S):-
     write('O genero e feminino?'),
-    genero(S,feminino).
+    if_else(genero(S,feminino), write('sim'), write('nao')), nl,
+    vez_computador(S).
 
 % Pergunta BIGODE
 pergunta_bigode(S) :-
@@ -190,3 +208,5 @@ main() :-
     assertz(personagem(computador,S)), 
     write('A cara do computador e: '), write(S),
     vez_jogador(S).
+
+cls :- write('\33\[2J').
