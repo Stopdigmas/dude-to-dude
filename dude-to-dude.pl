@@ -1,6 +1,7 @@
 :- dynamic personagem/2.
 :- dynamic computador/1.
 :-[db].
+:-[computer].
 
 sorteio(S):-
     random_between(1, 16, X),
@@ -22,8 +23,7 @@ mostra_menu(Option,S):-
     ler_caracteristica(Option, S).
     
 ler_caracteristica(1, S):-
-    write('Possui bigode ?'),nl,
-    bigode(S).
+    pergunta_bigode(S).
 
 ler_caracteristica(2,S):-
     nl,
@@ -52,7 +52,7 @@ ler_caracteristica(3,S):-
 
 ler_caracteristica(4,S):-
     write('Possui barba?'),nl,
-    barba(S).
+    barba(S, sim).
 
 ler_caracteristica(5,S):-
     write('Qual a espécie?'),nl,
@@ -161,11 +161,32 @@ pergunta_genero(2,S):-
     write('O genero e feminino?'),
     genero(S,feminino).
 
-main:-
+% Pergunta BIGODE
+pergunta_bigode(S) :-
+    write('Possui bigode?'),nl,
+    if_else(bigode(S, sim), write('sim'), write('nao')), nl,
+    vez_computador(S).
+
+% Vez do jogador
+vez_jogador(S) :-
+    mostra_menu(Option, S),
+    vez_computador(S).
+
+% Vez do computador
+vez_computador(S) :-
+    nl,
+    write('Vez do computador'), nl,
+    lista_computador(Computador),
+    write(Computador),
+    length(Computador, N),
+    
+    if_else(N = 1, adivinhar(Computador), sorteio_pergunta(S)).
+
+main() :-
     sorteio(S1),
     sorteio(S),
     assertz(personagem(usuario, S1)),
     write('Tua cara é: '), write(S1), nl,
     assertz(personagem(computador,S)), 
     write('A cara do computador e: '), write(S),
-    mostra_menu(X, S).
+    vez_jogador(S).

@@ -19,11 +19,11 @@ numero(1, clarissa).
 numero(2, felipe).
 numero(3, mariana).
 numero(4, romeu).
-numero(5, mauricio).
+numero(5, maurício).
 numero(6, milene).
 numero(7, carla).
 numero(8, renato).
-numero(9, fabio).
+numero(9, fábio).
 numero(10, edson).
 numero(11, cacau).
 numero(12, arya).
@@ -38,11 +38,11 @@ olho(bruna, castanho).
 olho(felipe, castanho).
 olho(mariana, castanho).
 olho(romeu, castanho).
-olho(mauricio, castanho).
+olho(maurício, castanho).
 olho(milene, castanho).
 olho(carla, azul).
 olho(renato, verde).
-olho(fabio, verde).
+olho(fábio, verde).
 olho(edson, castanho).
 olho(cacau, castanho).
 olho(arya, azul).
@@ -67,8 +67,8 @@ cabelo(mariana, longo).
 cabelo(romeu, preto).
 cabelo(romeu, curto).
 
-cabelo(mauricio, castanho).
-cabelo(mauricio, curto).
+cabelo(maurício, castanho).
+cabelo(maurício, curto).
 
 cabelo(milene, castanho).
 cabelo(milene, longo).
@@ -79,8 +79,8 @@ cabelo(carla, curto).
 cabelo(renato, loiro).
 cabelo(renato, curto).
 
-cabelo(fabio, grisalho).
-cabelo(fabio, curto).
+cabelo(fábio, grisalho).
+cabelo(fábio, curto).
 
 cabelo(edson, preto).
 cabelo(edson, curto).
@@ -109,11 +109,11 @@ especie(bruna, humano).
 especie(felipe, humano).
 especie(mariana, humano).
 especie(romeu, humano).
-especie(mauricio, humano).
+especie(maurício, humano).
 especie(milene, humano).
 especie(carla, humano).
 especie(renato, humano).
-especie(fabio, humano).
+especie(fábio, humano).
 especie(edson, humano).
 especie(cacau, cachorro).
 especie(arya, gato).
@@ -128,11 +128,11 @@ genero(bruna, feminino).
 genero(felipe, masculino).
 genero(mariana, feminino).
 genero(romeu, masculino).
-genero(mauricio, masculino).
+genero(maurício, masculino).
 genero(milene, feminino).
 genero(carla, feminino).
 genero(renato, masculino).
-genero(fabio, masculino).
+genero(fábio, masculino).
 genero(edson, masculino).
 genero(cacau, feminino).
 genero(arya, feminino).
@@ -147,11 +147,11 @@ funcao(bruna, aluno).
 funcao(felipe, aluno).
 funcao(mariana, aluno).
 funcao(romeu, aluno).
-funcao(mauricio, professor).
+funcao(maurício, professor).
 funcao(milene, professor).
 funcao(carla, professor).
 funcao(renato, professor).
-funcao(fabio, professor).
+funcao(fábio, professor).
 funcao(edson, professor).
 funcao(cacau, professor).
 funcao(arya, nada).
@@ -167,11 +167,11 @@ barba(bruna, nao).
 barba(felipe, sim).
 barba(mariana, nao).
 barba(romeu, sim).
-barba(mauricio, nao).
+barba(maurício, nao).
 barba(milene, nao).
 barba(carla, nao).
 barba(renato, sim).
-barba(fabio, sim).
+barba(fábio, sim).
 barba(edson, sim).
 barba(cacau, nao).
 barba(arya, nao).
@@ -188,18 +188,18 @@ bigode(bruna, nao).
 bigode(felipe, sim).
 bigode(mariana, nao).
 bigode(romeu, sim).
-bigode(mauricio, nao).
+bigode(maurício, nao).
 bigode(milene, nao).
 bigode(carla, nao).
 bigode(renato, sim).
-bigode(fabio, sim).
+bigode(fábio, sim).
 bigode(edson, sim).
-bigode(cacau, nao).
+bigode(cacau, sim).
 bigode(arya, sim).
 bigode(naveen, sim).
-bigode(meg, nao).
+bigode(meg, sim).
 bigode(koda, nao).
-bigode(nina, nao).
+bigode(nina, sim).
 
 % oculos
 
@@ -208,11 +208,11 @@ oculos(bruna, sim).
 oculos(felipe, sim).
 oculos(mariana, nao).
 oculos(romeu, nao).
-oculos(mauricio, nao).
+oculos(maurício, nao).
 oculos(milene, nao).
 oculos(carla, nao).
 oculos(renato, sim).
-oculos(fabio, sim).
+oculos(fábio, sim).
 oculos(edson, sim).
 oculos(cacau, nao).
 oculos(arya, nao).
@@ -222,3 +222,4 @@ oculos(koda, nao).
 oculos(nina, nao).
 
 computador([clarissa,felipe,mariana,romeu,maurício,milene,carla,renato,fábio,edson,cacau,arya,naveen,meg,koda,nina]).
+perguntas([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]).

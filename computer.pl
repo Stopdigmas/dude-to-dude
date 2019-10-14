@@ -5,9 +5,12 @@ lista_computador(X):- computador(X).
 lista_perguntas(X):- perguntas(X).
 
 sorteio_pergunta(S):-
-    lista_perguntas(Y)
+    lista_perguntas(Y),
     random_member(X, Y),
     pergunta_computador(X),
+    deletar_perguntas(X, Y).
+    
+deletar_perguntas(X, Y):-
     delete(X, Y, L),
     retract(perguntas(X)),
     assertz(perguntas(L)).
@@ -18,12 +21,18 @@ percorre_lista(Computador, OptionsToDelete, Novalista) :-
 
 deletar_elemento(0,_, _, Novalista):-
     retract(computador(X)),
-    assertz(computador(Novalista)).
+    assertz(computador(Novalista)),
+    vez_jogador(S).
 
 deletar_elemento(N,Computador,OptionsToDelete, Novalista):-
     [HEAD | TAIL] = OptionsToDelete,
     delete(Computador, HEAD, L),
     percorre_lista(L, TAIL, L).
+
+adivinhar(Computador) :-
+    nth0(0, Computador, Resposta),
+    write('Você é o(a) '),
+    write(Resposta), nl.
 
 pergunta_computador(1):-
     nl,
@@ -88,7 +97,7 @@ pergunta_computador(6):-
         findall(X, (cabelo(X,Y), Y = preto), OptionsToDelete)
     ),
     lista_computador(Computador),
-    percorre_lista(Computador, OptionsToDelete, Novalista)
+    percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(7):-
     write('Possui cabelo Loiro?'),
@@ -211,8 +220,38 @@ pergunta_computador(18):-
     write('O genero e feminino?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (genero(X,Y), Y \= genero), OptionsToDelete),
-        findall(X, (genero(X,Y), Y = genero), OptionsToDelete)
+        findall(X, (genero(X,Y), Y \= feminino), OptionsToDelete),
+        findall(X, (genero(X,Y), Y = feminino), OptionsToDelete)
+    ),
+    lista_computador(Computador),
+    percorre_lista(Computador, OptionsToDelete, Novalista).
+
+pergunta_computador(19):-
+    write('Você é professor?'),
+    read(Resposta),
+    if_else(Resposta=sim,
+        findall(X, (funcao(X,Y), Y \= professor), OptionsToDelete),
+        findall(X, (funcao(X,Y), Y = professor), OptionsToDelete)
+    ),
+    lista_computador(Computador),
+    percorre_lista(Computador, OptionsToDelete, Novalista).
+
+pergunta_computador(20):-
+    write('Você é aluno?'),
+    read(Resposta),
+    if_else(Resposta=sim,
+        findall(X, (funcao(X,Y), Y \= aluno), OptionsToDelete),
+        findall(X, (funcao(X,Y), Y = aluno), OptionsToDelete)
+    ),
+    lista_computador(Computador),
+    percorre_lista(Computador, OptionsToDelete, Novalista).
+
+pergunta_computador(20):-
+    write('Você é um animal de estimação?'),
+    read(Resposta),
+    if_else(Resposta=sim,
+        findall(X, (funcao(X,Y), Y \= nada), OptionsToDelete),
+        findall(X, (funcao(X,Y), Y = nada), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
