@@ -10,7 +10,7 @@ mostra_menu(Option,S):-
     write('Dá o papo da tua característica: (Clica o número e adiciona o ponto depois, meu chegado!)'),nl,
     write('1 - Bigode'),nl,
     write('2 - Olhos'),nl,
-    write('3 - Cabelo'),nl,
+    write('3 - Cabelo/Pelo'),nl,
     write('4 - Barba'),nl,
     write('5 - Espécie'),nl,
     write('6 - Gênero'),nl,
@@ -58,27 +58,27 @@ ler_caracteristica(5,S):-
     write('1 - Humano'),nl,
     write('2 - Cachorro'),nl,
     write('3 - Gato'),nl,
-    read(Option,S),
+    read(Option),
     pergunta_especie(Option,S).
 
 ler_caracteristica(6,S):-
     write('Qual o gênero?'),nl,
     write('1 - Masculino'),nl,
     write('2 - Feminino'),nl,
-    read(Option,S),
+    read(Option),
     pergunta_genero(Option,S).
 
 ler_caracteristica(7,S):-
     write('Usa oculos?'),
-    oculos(S).
+    oculos(S, sim).
 
 ler_caracteristica(8,S):-
     write('E aluno?'),
-    aluno(S).
+    funcao(S, aluno).
 
 ler_caracteristica(9,S):-
     write('E professor'),
-    professor(S).
+    funcao(S, professor).
 
 % PERGUNTA SORE OLHO
 pergunta_cor_olho(1,S):-

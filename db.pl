@@ -85,23 +85,23 @@ cabelo(fabio, curto).
 cabelo(edson, preto).
 cabelo(edson, curto).
 
-pelo(cacau, beige).
-pelo(cacau, curto).
+cabelo(cacau, beige).
+cabelo(cacau, curto).
 
-pelo(arya, mesclado).
-pelo(arya, longo).
+cabelo(arya, mesclado).
+cabelo(arya, longo).
 
-pelo(naveen, amarelo).
-pelo(naveen, curto).
+cabelo(naveen, amarelo).
+cabelo(naveen, curto).
 
-pelo(meg, marrom).
-pelo(meg, curto).
+cabelo(meg, marrom).
+cabelo(meg, curto).
 
-pelo(koda, mesclado).
-pelo(koda, curto).
+cabelo(koda, mesclado).
+cabelo(koda, curto).
 
-pelo(nina, marrom).
-pelo(nina, curto).
+cabelo(nina, marrom).
+cabelo(nina, curto).
 
 % especie(nome, especie)
 especie(clarissa, humano).
@@ -141,48 +141,99 @@ genero(meg, feminino).
 genero(koda, masculino).
 genero(nina, feminino).
 
-% alunos
-aluno(clarissa).
-aluno(bruna).
-aluno(felipe).
-aluno(mariana).
-aluno(romeu).
-
-% professores
-professor(mauricio).
-professor(milene).
-professor(carla).
-professor(renato).
-professor(fabio).
-professor(edson).
+% funcao
+funcao(clarissa, aluno).
+funcao(bruna, aluno).
+funcao(felipe, aluno).
+funcao(mariana, aluno).
+funcao(romeu, aluno).
+funcao(mauricio, professor).
+funcao(milene, professor).
+funcao(carla, professor).
+funcao(renato, professor).
+funcao(fabio, professor).
+funcao(edson, professor).
+funcao(cacau, professor).
+funcao(arya, nada).
+funcao(naveen, nada).
+funcao(meg, nada).
+funcao(koda, nada).
+funcao(nina, nada).
 
 % barba
-barba(renato).
-barba(fabio).
-barba(edson).
-barba(felipe).
-barba(romeu).
+
+barba(clarissa, nao).
+barba(bruna, nao).
+barba(felipe, sim).
+barba(mariana, nao).
+barba(romeu, sim).
+barba(mauricio, nao).
+barba(milene, nao).
+barba(carla, nao).
+barba(renato, sim).
+barba(fabio, sim).
+barba(edson, sim).
+barba(cacau, nao).
+barba(arya, nao).
+barba(naveen, nao).
+barba(meg, nao).
+barba(koda, nao).
+barba(nina, nao).
+
 
 % bigode
-bigode(felipe).
-bigode(romeu).
-bigode(renato).
-bigode(fabio).
-bigode(cacau).
-bigode(arya).
-bigode(naveen).
-bigode(meg).
-bigode(koda).
-bigode(nina).
+
+bigode(clarissa, nao).
+bigode(bruna, nao).
+bigode(felipe, sim).
+bigode(mariana, nao).
+bigode(romeu, sim).
+bigode(mauricio, nao).
+bigode(milene, nao).
+bigode(carla, nao).
+bigode(renato, sim).
+bigode(fabio, sim).
+bigode(edson, sim).
+bigode(cacau, nao).
+bigode(arya, sim).
+bigode(naveen, sim).
+bigode(meg, nao).
+bigode(koda, nao).
+bigode(nina, nao).
 
 % oculos
-oculos(felipe).
-oculos(bruna).
-oculos(renato).
-oculos(fabio).
-oculos(edson).
 
+oculos(clarissa, nao).
+oculos(bruna, sim).
+oculos(felipe, sim).
+oculos(mariana, nao).
+oculos(romeu, nao).
+oculos(mauricio, nao).
+oculos(milene, nao).
+oculos(carla, nao).
+oculos(renato, sim).
+oculos(fabio, sim).
+oculos(edson, sim).
+oculos(cacau, nao).
+oculos(arya, nao).
+oculos(naveen, nao).
+oculos(meg, nao).
+oculos(koda, nao).
+oculos(nina, nao).
 
-
-
-
+computador(clarissa).
+computador(felipe).
+computador(mariana).
+computador(romeu).
+computador(maurício).
+computador(milene).
+computador(carla).
+computador(renato).
+computador(fábio).
+computador(edson).
+computador(cacau).
+computador(arya).
+computador(naveen).
+computador(meg).
+computador(koda).
+computador(nina).
