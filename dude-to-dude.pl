@@ -1,5 +1,6 @@
 :- dynamic personagem/2.
 :- dynamic computador/1.
+:- dynamic perguntas/1.
 :-[db].
 :-[computer].
 
@@ -109,47 +110,47 @@ pergunta_cor_olho(4,S):-
 % PERGUNTA SOBRE O CABELO
 pergunta_caracteristica_cabelo(1, S):-
     write('Possui cabelo Castanho?'),
-    if_else(cabelo(S,castanho), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,castanho,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(2, S):-
     write('Possui cabelo Preto?'),
-    if_else(cabelo(S,preto), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,preto,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(3, S):-
     write('Possui cabelo Loiro?'),
-    if_else(cabelo(S,loiro), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,loiro,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(4, S):-
     write('Possui cabelo Grisalho?'),
-    if_else(cabelo(S,grisalho), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,grisalho,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(5, S):-
     write('Possui cabelo Mesclado?'),
-    if_else(cabelo(S,mesclado), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,mesclado,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(6, S):-
     write('Possui cabelo Amarelo?'),
-    if_else(cabelo(S,amarelo), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,amarelo,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(7, S):-
     write('Possui cabelo Marrom?'),
-    if_else(cabelo(S,marrom), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,marrom,_), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(8, S):-
     write('Possui cabelo Longo?'),
-    if_else(cabelo(S,longo), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,_,longo), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 pergunta_caracteristica_cabelo(9, S):-
     write('Possui cabelo Curto?'),
-    if_else(cabelo(S,curto), write('sim'), write('nao')), nl,
+    if_else(cabelo(S,_,curto), write('sim'), write('nao')), nl,
     vez_computador(S).
 
 % PERGUNTA ESPECIE

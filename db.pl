@@ -52,56 +52,23 @@ olho(koda, castanho).
 olho(nina, castanho).
 
 % cabelo(nome, cor) / cabelo(nome, tamanho)
-cabelo(clarissa, preto).
-cabelo(clarissa, curto).
-
-cabelo(bruna, castanho).
-cabelo(bruna, longo).
-
-cabelo(felipe, preto).
-cabelo(felipe, curto).
-
-cabelo(mariana, preto).
-cabelo(mariana, longo).
-
-cabelo(romeu, preto).
-cabelo(romeu, curto).
-
-cabelo(maurício, castanho).
-cabelo(maurício, curto).
-
-cabelo(milene, castanho).
-cabelo(milene, longo).
-
-cabelo(carla, loiro).
-cabelo(carla, curto).
-
-cabelo(renato, loiro).
-cabelo(renato, curto).
-
-cabelo(fábio, grisalho).
-cabelo(fábio, curto).
-
-cabelo(edson, preto).
-cabelo(edson, curto).
-
-cabelo(cacau, beige).
-cabelo(cacau, curto).
-
-cabelo(arya, mesclado).
-cabelo(arya, longo).
-
-cabelo(naveen, amarelo).
-cabelo(naveen, curto).
-
-cabelo(meg, marrom).
-cabelo(meg, curto).
-
-cabelo(koda, mesclado).
-cabelo(koda, curto).
-
-cabelo(nina, marrom).
-cabelo(nina, curto).
+cabelo(clarissa, preto,curto).
+cabelo(bruna, castanho, longo).
+cabelo(felipe, preto,curto).
+cabelo(mariana, preto,longo).
+cabelo(romeu, preto, curto).
+cabelo(maurício, castanho, curto).
+cabelo(milene, castanho, longo).
+cabelo(carla, loiro, curto).
+cabelo(renato, loiro, curto).
+cabelo(fábio, grisalho, curto).
+cabelo(edson, preto, curto).
+cabelo(cacau, beige, curto).
+cabelo(arya, mesclado, longo).
+cabelo(naveen, amarelo,curto).
+cabelo(meg, marrom, curto).
+cabelo(koda, mesclado, curto).
+cabelo(nina, marrom, curto).
 
 % especie(nome, especie)
 especie(clarissa, humano).

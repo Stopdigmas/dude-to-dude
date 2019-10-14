@@ -7,21 +7,21 @@ lista_perguntas(X):- perguntas(X).
 sorteio_pergunta(S):-
     lista_perguntas(Y),
     random_member(X, Y),
-    pergunta_computador(X),
-    deletar_perguntas(X, Y).
+    deletar_perguntas(X, Y),
+    pergunta_computador(X).
     
 deletar_perguntas(X, Y):-
-    delete(X, Y, L),
-    retract(perguntas(X)),
+    delete(Y, X, L),
+    retract(perguntas(Z)),
     assertz(perguntas(L)).
 
 percorre_lista(Computador, OptionsToDelete, Novalista) :-
     length(OptionsToDelete, N),
     deletar_elemento(N, Computador, OptionsToDelete, Novalista).
 
-deletar_elemento(0,_, _, Novalista):-
+deletar_elemento(0, Computador, _, _):-
     retract(computador(X)),
-    assertz(computador(Novalista)),
+    assertz(computador(Computador)),
     vez_jogador(S).
 
 deletar_elemento(N,Computador,OptionsToDelete, Novalista):-
@@ -83,8 +83,8 @@ pergunta_computador(5):-
     write('Possui cabelo Castanho?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= castanho), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = castanho), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= castanho), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = castanho), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -93,8 +93,8 @@ pergunta_computador(6):-
     write('Possui cabelo Preto?'),
     read(Resposta),
         if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= preto), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = preto), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= preto), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = preto), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -103,8 +103,8 @@ pergunta_computador(7):-
     write('Possui cabelo Loiro?'),
     read(Resposta),
         if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= loiro), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = loiro), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= loiro), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = loiro), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -114,8 +114,8 @@ pergunta_computador(8):-
     write('Possui cabelo Grisalho?'),
     read(Resposta),
         if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= grisalho), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = grisalho), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= grisalho), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = grisalho), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -125,8 +125,8 @@ pergunta_computador(9):-
     write('Possui cabelo Mesclado?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= mesclado), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = mesclado), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= mesclado), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = mesclado), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -136,8 +136,8 @@ pergunta_computador(10):-
     write('Possui cabelo Amarelo?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= amarelo), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = amarelo), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= amarelo), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = amarelo), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -147,8 +147,8 @@ pergunta_computador(11):-
     write('Possui cabelo Marrom?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= marrom), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = marrom), OptionsToDelete)
+        findall(X, (cabelo(X,Y,_), Y \= marrom), OptionsToDelete),
+        findall(X, (cabelo(X,Y,_), Y = marrom), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -157,8 +157,8 @@ pergunta_computador(12):-
     write('Possui cabelo Longo?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= longo), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = longo), OptionsToDelete)
+        findall(X, (cabelo(X,_,Y), Y \= longo), OptionsToDelete),
+        findall(X, (cabelo(X,_,Y), Y = longo), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
@@ -168,8 +168,8 @@ pergunta_computador(13):-
     write('Possui cabelo Curto?'),
     read(Resposta),
     if_else(Resposta=sim,
-        findall(X, (cabelo(X,Y), Y \= curto), OptionsToDelete),
-        findall(X, (cabelo(X,Y), Y = curto), OptionsToDelete)
+        findall(X, (cabelo(X,_,Y), Y \= curto), OptionsToDelete),
+        findall(X, (cabelo(X,_,Y), Y = curto), OptionsToDelete)
     ),
     lista_computador(Computador),
     percorre_lista(Computador, OptionsToDelete, Novalista).
