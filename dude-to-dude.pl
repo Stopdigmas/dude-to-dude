@@ -1,4 +1,5 @@
 :- dynamic personagem/2.
+:- dynamic computador/1.
 :-[db].
 
 sorteio(S):-

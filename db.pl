@@ -221,19 +221,4 @@ oculos(meg, nao).
 oculos(koda, nao).
 oculos(nina, nao).
 
-computador(clarissa).
-computador(felipe).
-computador(mariana).
-computador(romeu).
-computador(maurício).
-computador(milene).
-computador(carla).
-computador(renato).
-computador(fábio).
-computador(edson).
-computador(cacau).
-computador(arya).
-computador(naveen).
-computador(meg).
-computador(koda).
-computador(nina).
+computador([clarissa,felipe,mariana,romeu,maurício,milene,carla,renato,fábio,edson,cacau,arya,naveen,meg,koda,nina]).
