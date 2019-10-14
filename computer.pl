@@ -38,7 +38,7 @@ adivinhar(Computador) :-
 
 pergunta_computador(1):-
     nl,
-    write('A cor do olho e Castanho?'),
+    write('COMPUTADOR: A cor do seu olho é castanha?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (olho(X,Y), Y \= castanho), OptionsToDelete),
@@ -49,7 +49,7 @@ pergunta_computador(1):-
 
 pergunta_computador(2):-
     nl,
-    write('A cor do olho e Azul?'),
+    write('COMPUTADOR: A cor do seu olho é azul?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (olho(X,Y), Y \= azul), OptionsToDelete),
@@ -60,7 +60,7 @@ pergunta_computador(2):-
 
 pergunta_computador(3):-
     nl,
-    write('A cor do olho e Verde?'),
+    write('COMPUTADOR: A cor do seu olho é verde?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (olho(X,Y), Y \= verde), OptionsToDelete),
@@ -71,7 +71,7 @@ pergunta_computador(3):-
 
 pergunta_computador(4):-
     nl,
-    write('A cor do olho e Amarelo?'),
+    write('COMPUTADOR: A cor do seu olho é amarela?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (olho(X,Y), Y \= amarelo), OptionsToDelete),
@@ -82,7 +82,7 @@ pergunta_computador(4):-
 
 % pergunta_computador SOBRE O CABELO
 pergunta_computador(5):-
-    write('Possui cabelo Castanho?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é castanho?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= castanho), OptionsToDelete),
@@ -92,7 +92,7 @@ pergunta_computador(5):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(6):-
-    write('Possui cabelo Preto?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é preto?'),
     read(Resposta),
         if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= preto), OptionsToDelete),
@@ -102,7 +102,7 @@ pergunta_computador(6):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(7):-
-    write('Possui cabelo Loiro?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é loiro?'),
     read(Resposta),
         if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= loiro), OptionsToDelete),
@@ -113,7 +113,7 @@ pergunta_computador(7):-
 
 
 pergunta_computador(8):-
-    write('Possui cabelo Grisalho?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é grisalho?'),
     read(Resposta),
         if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= grisalho), OptionsToDelete),
@@ -124,7 +124,7 @@ pergunta_computador(8):-
 
 
 pergunta_computador(9):-
-    write('Possui cabelo Mesclado?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é mesclado?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= mesclado), OptionsToDelete),
@@ -135,7 +135,7 @@ pergunta_computador(9):-
 
 
 pergunta_computador(10):-
-    write('Possui cabelo Amarelo?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é amarelo?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= amarelo), OptionsToDelete),
@@ -146,7 +146,7 @@ pergunta_computador(10):-
 
 
 pergunta_computador(11):-
-    write('Possui cabelo Marrom?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é marrom?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (cabelo(X,Y,_), Y \= marrom), OptionsToDelete),
@@ -156,7 +156,7 @@ pergunta_computador(11):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(12):-
-    write('Possui cabelo Longo?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é longo?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (cabelo(X,_,Y), Y \= longo), OptionsToDelete),
@@ -167,7 +167,7 @@ pergunta_computador(12):-
 
 
 pergunta_computador(13):-
-    write('Possui cabelo Curto?'),
+    write('COMPUTADOR: O seu cabelo ou pelo é curto?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (cabelo(X,_,Y), Y \= curto), OptionsToDelete),
@@ -178,7 +178,7 @@ pergunta_computador(13):-
 
 % pergunta_computador ESPECIE
 pergunta_computador(14):-
-    write('A especie e Humano?'),
+    write('COMPUTADOR: Você é uma pessoa?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (especie(X,Y), Y \= humano), OptionsToDelete),
@@ -188,7 +188,7 @@ pergunta_computador(14):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(15):-
-    write('A especie e Cachorro?'),
+    write('COMPUTADOR: Você é um cachorro?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (especie(X,Y), Y \= cachorro), OptionsToDelete),
@@ -198,7 +198,7 @@ pergunta_computador(15):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(16):-
-    write('A especie e Gato?'),
+    write('COMPUTADOR: Você é um gato?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (especie(X,Y), Y \= gato), OptionsToDelete),
@@ -209,7 +209,7 @@ pergunta_computador(16):-
 
 % pergunta_computador GENERO
 pergunta_computador(17):-
-    write('O genero e masculino?'),
+    write('COMPUTADOR: Você é homem/ macho?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (genero(X,Y), Y \= masculino), OptionsToDelete),
@@ -219,7 +219,7 @@ pergunta_computador(17):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(18):-
-    write('O genero e feminino?'),
+    write('COMPUTADOR: Você é mulher/ fêmea?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (genero(X,Y), Y \= feminino), OptionsToDelete),
@@ -229,7 +229,7 @@ pergunta_computador(18):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(19):-
-    write('Você é professor?'),
+    write('COMPUTADOR: Você é professor?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (funcao(X,Y), Y \= professor), OptionsToDelete),
@@ -239,7 +239,7 @@ pergunta_computador(19):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(20):-
-    write('Você é aluno?'),
+    write('COMPUTADOR: Você é aluno?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (funcao(X,Y), Y \= aluno), OptionsToDelete),
@@ -249,7 +249,7 @@ pergunta_computador(20):-
     percorre_lista(Computador, OptionsToDelete, Novalista).
 
 pergunta_computador(20):-
-    write('Você é um animal de estimação?'),
+    write('COMPUTADOR: Você é um animal de estimação?'),
     read(Resposta),
     if_else(Resposta=sim,
         findall(X, (funcao(X,Y), Y \= nada), OptionsToDelete),

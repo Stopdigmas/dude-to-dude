@@ -104,15 +104,14 @@ ler_caracteristica(11,S):-
     write('COMPUTADOR: Então você já sabe quem eu sou??? '),nl,
     write('Escreve meu nome então (exatamente igual ao papel, por favor!)'), nl,
     read(Adivinhar),
-    if_else(Adivinhar = S, write('Você ganhou!'), errou).
+    if_else(Adivinhar = S, (ganhou,!), errou).
 
 errou :-
     write('Você não acertou!'),nl,
     vez_computador.
 
 ganhou :-
-    write('Você ganhou!'), nl,
-    !.
+    write('Você ganhou!'), nl, !.
 
 % PERGUNTA SORE OLHO
 pergunta_cor_olho(1,S):-
