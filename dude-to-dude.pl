@@ -1,3 +1,4 @@
+:- style_check(-singleton).
 :- dynamic computador/1.
 :- dynamic perguntas/1.
 :- dynamic carta/1.
